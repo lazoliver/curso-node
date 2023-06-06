@@ -1,0 +1,12 @@
+h1{text-align: center;}
+.products{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0 50px;
+}
+.product{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
