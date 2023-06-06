@@ -5,7 +5,11 @@ const app = express();
 
 const port = 3000;
 
-app.engine("handlebars", exphbs.engine());
+const hbs = exphbs.create({
+  partialsDir: ["views/partials"],
+});
+
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 app.get("/dashboard", (req, res) => {
@@ -25,6 +29,24 @@ app.get("/post", (req, res) => {
     comments: 4,
   };
   res.render("blogpost", { post });
+});
+
+app.get("/blog", (req, res) => {
+  const posts = [
+    {
+      title: "Aprender NodeJS",
+      category: "Javascript",
+      body: "Este artigo vai te ajudar a aprender NodeJS",
+      comments: 4,
+    },
+    {
+      title: "Aprender React",
+      category: "Front End",
+      body: "Este artigo vai te ajudar a aprender React",
+      comments: 2,
+    },
+  ];
+  res.render("blog", { posts });
 });
 
 app.get("/", (req, res) => {
