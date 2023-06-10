@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>
+        Hello, Sequelize!
+    </h2>
+    <a href="/adduser">Adicionar usuário</a>
+    <div class="users">
+        {{#each users}}
+            <div id="{{id}}">
+                <h3>
+                    {{name}}
+                </h3>
+                <p><span>Profissão: {{occupation}}</span> - <span>Inscrita: {{newsletter}}</span></p>
+            </div>
+        {{/each}}
+    </div>
+</div>
