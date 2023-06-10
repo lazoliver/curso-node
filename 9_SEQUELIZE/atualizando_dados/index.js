@@ -112,6 +112,8 @@ app.get("/", async (req, res) => {
 /* database */
 conn
   .sync()
+  /* forçar a criação de tabela com force */
+  /* .sync({ force: true }) */
   .then(() => {
     /* server */
     app.listen(port, () => {
