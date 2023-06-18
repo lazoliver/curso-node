@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>
+        Visão do usuário
+    </h2>
+    <a href="/">Voltar para Home</a>
+    <div id="{{user.id}}" class="user">
+        <h3>
+            {{user.name}}
+        </h3>
+        <p><span>Profissão: {{user.occupation}}</span> - <span>Inscrita: {{user.newsletter}}</span></p>
+        <a href="/users/edit/{{user.id}}">Editar</a>
+    </div>
+</div>
