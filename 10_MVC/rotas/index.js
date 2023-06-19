@@ -22,7 +22,7 @@ app.use(
 app.use(express.json());
 
 // routes
-const TaskRoutes = require("./routes/TaskRoutes");
+const TasksRoutes = require("./routes/TasksRoutes");
 
 /* handlebars */
 const hbs = exphbs.create({
@@ -35,15 +35,8 @@ app.set("view engine", "handlebars");
 /* static */
 app.use(express.static("public"));
 
-/* route: home */
-app.get("/", async (req, res) => {
-  try {
-    await res.render("home");
-  } catch (err) {
-    console.log(err);
-    return;
-  }
-});
+/* route: tasks */
+app.use("/tasks", TasksRoutes);
 
 conn
   .sync()
