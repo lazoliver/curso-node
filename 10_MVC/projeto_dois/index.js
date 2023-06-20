@@ -14,7 +14,10 @@ const Tought = require("./models/Tought");
 const User = require("./models/User");
 
 // handlebars
-app.engine("handlebats", exphbs.engine);
+const hbs = exphbs.create({
+  partialsDir: ["views/partials"],
+});
+app.engine("handlebats", hbs.engine);
 app.set("view engine", "handlebars");
 
 // read body
@@ -23,7 +26,6 @@ app.use(
     extended: true,
   })
 );
-
 app.use(express.json());
 
 // public path
