@@ -1,0 +1,30 @@
+<div>
+    <h2>
+        All Tasks
+    </h2>
+    <ul>
+        {{#each tasks}}
+            <li>
+                {{#if this.done}}
+                    <a href="/" class="title done">
+                        {{this.title}}
+                    </a>
+                {{else}}
+                    <a href="/" class="title">
+                        {{this.title}}
+                    </a>
+                {{/if}}
+            </li>
+            <form action="/tasks/updateStatus" method="POST">
+                <input type="hidden" name="id" value={{this.id}}>
+                <input type="hidden" name="done" value={{this.done}}>
+                <input type="submit" value="Concluir">
+            </form>
+            <a href="/tasks/edit/{{this.id}}">Editar</a>
+            <form action="/tasks/remove" method="POST">
+                <input type="hidden" name="id" value={{this.id}}>
+                <input type="submit" value="Excluir">
+            </form>
+        {{/each}}
+    </ul>
+</div>
