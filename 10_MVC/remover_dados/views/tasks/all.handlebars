@@ -1,0 +1,18 @@
+<div>
+    <h2>
+        All Tasks
+    </h2>
+    <ul>
+        {{#each tasks}}
+            <li>
+                <a href="/" class="title">
+                    {{this.title}}
+                </a>
+            </li>
+            <form action="/tasks/remove" method="POST">
+                <input type="hidden" name="id" value={{this.id}}>
+                <input type="submit" value="Excluir">
+            </form>
+        {{/each}}
+    </ul>
+</div>
