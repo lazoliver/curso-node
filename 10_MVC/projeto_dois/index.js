@@ -13,6 +13,12 @@ const conn = require("./db/conn");
 const Tought = require("./models/Tought");
 const User = require("./models/User");
 
+// routes
+const toughtRoutes = require("./routes/toughtRoutes");
+
+// controller
+const ToughtController = require("./controllers/ToughtController");
+
 // handlebars
 const hbs = exphbs.create({
   partialsDir: ["views/partials"],
@@ -62,6 +68,11 @@ app.use((req, res, next) => {
 
   next();
 });
+
+// routes
+app.use("/toughts", toughtRoutes);
+
+app.use("/", ToughtController.showToughts);
 
 // database
 conn
