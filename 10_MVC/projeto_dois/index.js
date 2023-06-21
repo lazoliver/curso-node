@@ -23,7 +23,7 @@ const ToughtController = require("./controllers/ToughtController");
 const hbs = exphbs.create({
   partialsDir: ["views/partials"],
 });
-app.engine("handlebats", hbs.engine);
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // read body
@@ -51,7 +51,7 @@ app.use(
     cookie: {
       secure: false,
       maxAge: 360000,
-      expires: new Data(Date.now() + 360000),
+      expires: new Date(Date.now() + 360000),
       httpOnly: true,
     },
   })
