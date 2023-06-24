@@ -1,3 +1,104 @@
-.done{
-    text-decoration: line-through;
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1280px;
+}
+/* header */
+header{
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+}
+header .container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+header .container h2{
+    color: #fff;
+}
+.navbar ul{
+    display: flex;
+    gap: 10px;
+}
+.navbar a{
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 150px;
+}
+/* main */
+/* all */
+main .container{
+    max-width: 600px;
+}
+main h2{
+    padding: 20px 0;
+    text-align: center;
+}
+.task{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.task a{
+    background: #000;
+    color: #fff;
+    justify-content: center;
+    width: calc(70% - 10px);
+}
+.task > a{padding: 15px 0 15px 30px;}
+.task .action{
+    display: inherit;
+    gap: 5px;
+    width: 30%;
+}
+.task .action a{
+    align-items: center;
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+.action form{
+    display: flex;
+    width: 100%;
+}
+.btn{
+    align-items: center;
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+/* add */
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+input[type="text"], textarea{
+    padding: 15px;
+}
+/* submit new task */
+input[type="submit"]{
+    background-color: #22ff22;
+    border: 1px solid #22ff22;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
 }
