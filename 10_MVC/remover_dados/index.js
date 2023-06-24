@@ -26,6 +26,9 @@ app.use(
 
 app.use(express.json());
 
+/* static */
+app.use(express.static("public"));
+
 /* router */
 app.use("/tasks", TaskRoutes);
 

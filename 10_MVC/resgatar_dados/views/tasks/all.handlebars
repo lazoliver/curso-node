@@ -1,0 +1,27 @@
+<main>
+    <div class="container">
+        <h2>
+            All Tasks
+        </h2>
+        <ul>
+            {{#each tasks}}
+                <li class="task">
+                    <a href="/">
+                        {{this.title}}
+                    </a>
+                    <div class="action">
+                        <a href="/">
+                            <i class="bi bi-check2"></i>
+                        </a>
+                        <a href="/">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a href="/">
+                            <i class="bi bi-x-lg"></i>
+                        </a>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</main>
