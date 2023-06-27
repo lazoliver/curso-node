@@ -3,6 +3,9 @@
         <h2>
             Register
         </h2>
+        {{#if messages.message}}
+            <p class="form-error">{{messages.message}}</p>
+        {{/if}}
         <form action="/register" method="POST" class="form">
             <div class="form-field">
                 <label for="name" for="name">Nome:</label>
@@ -13,8 +16,12 @@
                 <input type="email" name="email" placeholder="Digite o seu email" id="email" required>
             </div>
             <div class="form-field">
-                <label for="password" for="password">Email:</label>
+                <label for="password" for="password">Senha:</label>
                 <input type="password" name="password" placeholder="Digite a sua senha" id="password" required>
+            </div>
+            <div class="form-field">
+                <label for="confirmpassword" for="confirmpassword">Confirme sua senha:</label>
+                <input type="password" name="confirmpassword" placeholder="Confirme sua senha" id="confirmpassword" required>
             </div>
             <div class="form-field btn-field">
                 <input type="submit" value="Cadastrar">

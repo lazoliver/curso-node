@@ -59,7 +59,7 @@ main{
     background-color: #000;
     color: #fff;
     min-height: calc(100vh - 98px);
-    margin-top: 99px;
+    margin-top: 95px;
 }
 main h2{
     padding-top: 30px;
@@ -92,4 +92,12 @@ main h2{
 .btn-field{
     flex-direction: row;
     justify-content: center;
+}
+.form-error{
+    background: #ff5f5f;
+    border: 1px solid #f00;
+    border-radius: 20px;
+    margin: 20px 40px;
+    padding: 20px 0;
+    text-align: center;
 }
