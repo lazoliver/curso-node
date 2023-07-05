@@ -80,7 +80,6 @@ app.use("/", ToughtController.showToughts);
 conn
   .sync()
   .then(() => {
-    // server
     app.listen(port, () => {
       console.log(`Server is running on http://localhost:${port}`);
     });
