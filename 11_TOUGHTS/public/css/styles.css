@@ -37,7 +37,7 @@ ul{
     display: flex;
     gap: 10px;
 }
-nav a{
+nav a, .btn-field a{
     background: #000;
     border: 1px solid #fff;
     color: #fff;
@@ -60,6 +60,7 @@ main{
     color: #fff;
     min-height: calc(100vh - 98px);
     margin-top: 95px;
+    padding-top: 30px;
 }
 main h2{
     padding-top: 30px;

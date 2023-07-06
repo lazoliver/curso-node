@@ -1,7 +1,14 @@
-<main>
-    <div class="container">
-        <h2>
-            Criar novos pensamentos
-        </h2>
-    </div>
-</main>
+<div class="container">
+    <h2>
+        Criar pensamento
+    </h2>
+    <form action="/tought/add" method="POST" class="form">
+        <div class="form-field">
+            <label for="title" for="title">Pensamento:</label>
+            <input type="title" name="title" placeholder="Digite o seu pensamento" id="title" required>
+        </div>
+        <div class="form-field btn-field">
+            <input type="submit" value="Criar">
+        </div>
+    </form>
+</div>

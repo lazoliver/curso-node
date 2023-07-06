@@ -12,7 +12,7 @@ module.exports = class AuthController {
     const user = await User.findOne({ where: { email: email } });
 
     if (!user) {
-      res.flash("message", "Usuário não encontrado!");
+      req.flash("message", "Usuário não encontrado!");
       res.render("auth/login");
       return;
     }
@@ -36,7 +36,7 @@ module.exports = class AuthController {
   static register(req, res) {
     res.render("auth/register");
   }
-  static async registerPort(req, res) {
+  static async registerPost(req, res) {
     const { name, email, password, confirmpassword } = req.body;
 
     if (password != confirmpassword) {
@@ -61,8 +61,6 @@ module.exports = class AuthController {
       email,
       password: hashedPassword,
     };
-
-    await User.create(user);
 
     try {
       const createdUser = await User.create(user);

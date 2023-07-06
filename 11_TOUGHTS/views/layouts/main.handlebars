@@ -10,7 +10,12 @@
     </head>
     <body>
         {{> header}}
-        {{{body}}}
+        <main>
+            {{#if messages.message}}
+                <p class="form-error">{{messages.message}}</p>
+            {{/if}}
+            {{{body}}}
+        </main>
         {{> footer}}
     </body>
 </html>
